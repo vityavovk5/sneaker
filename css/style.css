@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MuseoModerno', cursive;
+}
+section {
+    height: 100vh;
+    background: url(../img/bg.jpg)  ;
+    background-size: 100%;
+    padding-top: 20vh;
+}
+#popup {
+    background-color: #111a28;
+    width: 685px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.75);
+}
+.logo {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    width: 440px;
+}
+.right {
+    width: 240px;
+}
+.main-text {
+    color: #b4b6b8;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.text {
+    color: #86898e;
+}
+.rating-area {
+	overflow: hidden;
+	width: 212px;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px red;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: red;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: red;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: red;
+	text-shadow: 1px 1px red;
+}
+.rate-area > label:active {
+	position: relative;
+}
+select {
+    background-color: transparent;
+    border: 1px solid #4f5560;
+    font-size: 20px;
+    color: #85878c;
+    padding: 11px;
+    margin: 10px 0 30px;
+}
+.but {
+    background-color: #202835;
+    border: 2px solid #4f5560;
+    color: #72767d;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.but:hover {
+    background-color: #72767d;
+    border: 2px solid #202835;
+    color: #202835;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.thumb {
+     
+     
+    bottom: 20px;
+    
+    display: flex;
+}
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover {
+    transform: translateY(-7px);
+}
+.thumb li img {
+    max-width: 85px;
+}

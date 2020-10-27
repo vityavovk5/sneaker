@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <section>
+        <div id="popup">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="imgBox">
+                        <img src="img/b1.png" class="nike" alt="">
+                    </div>
+                    <ul class="thumb">
+                        <li><img src="img/b1.png" onclick="imgSlider('img/b1.png');changeBgColor('#111a28')"></li>
+                        <li><img src="img/b2.png" onclick="imgSlider('img/b2.png');changeBgColor('#0062be')"></li>
+                        <li><img src="img/b3.png" onclick="imgSlider('img/b3.png');changeBgColor('#e60c2c')"></li>
+                        <li><img src="img/b4.png" onclick="imgSlider('img/b4.png');changeBgColor('#c80d76')"></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p class="main-text">
+                        Nike SB Stefan Janoski Max
+                    </p>
+                    <p class="text">
+                        Unisex Skateboarding Shoe (Men's Sizing)
+                    </p>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <select>
+                        <option value="">size</option>
+                        <option value="">37</option>
+                        <option value="">38</option>
+                        <option value="">39</option>
+                        <option value="">40</option>
+                        <option value="">41</option>
+                        <option value="">42</option>
+                        <option value="">43</option>
+                        <option value="">44</option>
+                        <option value="">45</option>
+                    </select>
+                    <select>
+                        <option value="">Qty</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                    </select><br>
+                    <a href="" class="but">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.nike').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('#popup');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
